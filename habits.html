@@ -1,0 +1,359 @@
+<!--1/31/2025 11:30pm habits.html (v0) -- incomplete-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Title of html doc-->
+    <title>Healthy Habits Log!</title>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <main>
+    <!-- Navigation links to other webpages in the website-->
+      <section>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="profile.html">Profile</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="habits.html">Habits Log</a>
+          <a href="money.html">Money Manager</a>
+          <a href="productivity.html">Productivity Arena</a>
+          <a href="form.html">Sign Up!</a>
+        </nav>
+        <hr>
+      </section>
+      
+      <!--Title of webpage-->
+      
+      <section>
+        <h1>Healthy Habits Log!</h1>
+      </section>
+      
+      <!--Brief description of webpage-->
+      
+      <section>
+        <hr>
+        <em>This page helps you log and see your healthy habits!</em>
+        <hr>
+      </section>
+      
+      <!--Contains and styles first subtitle-->
+      
+      <section>
+        <h3>
+          <center>
+            <b>
+              <u>
+                <span style="color: darkblue">
+                  What is this page for?
+                </span>
+              </u>
+            </b>
+          </center>
+        </h3>
+      </section>
+
+      <!--List that contains contact info for urgent assistance associated to website-->
+      
+      <section>
+        <ul>
+          <li>
+            Tracking your habits such as water intake, sleep, meals, exersise, and more!
+          </li>
+          <br>
+
+          <li>
+            Setting healthy habit goals!
+          </li>
+          <br>
+
+          <li>
+            Seeing your habit specific streaks!
+          </li>
+        </ul>
+      </section>
+
+      <hr>
+      
+      <!-- Second subtitle styled here-->
+      
+      <section>
+        <h3>
+          <center>
+            <strong>
+              <u>
+                <span style="color: darkblue">
+                  Today's Stats
+                </span>
+              </u>
+            </strong>
+          </center>
+        </h3>
+      </section>
+      
+      <!-- Form that posts results from form to another file-->
+      <!-- !!from here down is just stuff copied from contact.html that is not adjusted to fit habits.html yet!!-->
+      <!-- ideas to implement: checklist for stats to track, with water, sleep, meals and exersise preticked-->
+      <!-- and some text to temporairily take the place of text that would change based on user input (like water)-->
+      <!-- and the numbers for the Today's Stats section can be user inputted (text/form box?) (and maybe submitted at end of day? idk)-->
+      <!-- same thing for the numbers in Goals section, and the text in Goals would depend on the checkboxes from earlier ? if possible-->
+      <section>
+        <form method="POST" action="something.com">
+          
+          <!--Requests Email address from user-->
+          
+          <div>
+            <label for="emailaddr">Email Address:</label>
+            <input type="email" id="emailaddr" name="emailaddr"
+                   placeholder="name@domain.com"
+                   pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*">
+                   
+          </div>
+          <br>
+          
+          <!--Requests water amount from user-->
+          
+          <div>
+            <label for="water">Oz of Water:</label>
+            <input type="number" id="water" name="water"
+                   value="0">
+          </div>
+          
+          <br>
+          
+          <!--Requests sleep amount from user-->
+          
+          <div>
+            <label for="sleep">Hours of Sleep:</label>
+            <input type="number" id="sleep" name="sleep"
+                   value="0">
+          </div>
+          
+          <br>
+
+          <!--Requests meal amount from user-->
+          
+          <div>
+            <label for="meals">Number of Meals:</label>
+            <input type="number" id="meals" name="meals"
+                   value="0">
+          </div>
+          
+          <br>
+
+          <!--Requests exercise amount from user-->
+          
+          <div>
+            <label for="exercise">Minutes of Exercise:</label>
+            <input type="number" id="exercise" name="exercise"
+                   value="0">
+          </div>
+          
+          <br>
+          
+          <!--submits all info once form is completed-->
+          
+          <div>
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </section>
+
+      <br>
+
+      <!--Form that posts results of what stats to track, to another file-->
+      
+      <section>
+        <form method="POST" action="something.com">
+
+          <fieldset>
+            <legend>Stats to track:</legend>
+
+            <div>
+              <label for="waterToggle">Water</label>
+              <input type="checkbox" id="waterToggle" name="waterToggle">
+            </div>
+
+            <div>
+              <label for="sleepToggle">Sleep</label>
+              <input type="checkbox" id="sleepToggle" name="sleepToggle">
+            </div>
+
+            <div>
+              <label for="mealsToggle">Meals</label>
+              <input type="checkbox" id="mealsToggle" name="mealsToggle">
+            </div>
+
+            <div>
+              <label for="exerciseToggle">Exercise</label>
+              <input type="checkbox" id="exerciseToggle" name="exerciseToggle">
+            </div>
+
+            <!-- for the user to add custom stats to track -- only implement if we have time -- else delete-->
+            <div>
+              <label for="customStat">
+                <label for="customStatName">Stat you want to track:</label>
+                <input type="text" id="customStatName" name="customStatName"
+                       placeholder="ex. Time Outdoors">
+              </label>
+              <input type="checkbox" id="customStat" name="customStat">
+            </div>
+
+            <br>
+
+            <!--submits all info once form is completed-->
+          
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+      <hr>
+
+      <!-- Third subtitle styled here-->
+      
+      <section>
+        <h3>
+          <center>
+            <strong>
+              <u>
+                <span style="color: darkblue">
+                  Goals:
+                </span>
+              </u>
+            </strong>
+          </center>
+        </h3>
+      </section>
+
+      <!--Form that posts results of the goals of the user for each stat to another file-->
+
+      <section>
+        <form method="POST" action="something.com">
+          
+          <div>
+            <label for="waterGoal">Water:</label>
+            <input type="number" id="waterGoal" name="waterGoal"
+                   placeholder="60">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="sleepGoal">Sleep:</label>
+            <input type="number" id="sleepGoal" name="sleepGoal"
+                   placeholder="7">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="mealsGoal">Meals:</label>
+            <input type="number" id="mealsGoal" name="mealsGoal"
+                   placeholder="3">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="exerciseGoal">Water:</label>
+            <input type="number" id="exerciseGoal" name="exerciseGoal"
+                   placeholder="30">
+          </div>
+
+          <br>
+
+          <!--submits all info once form is completed-->
+          
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+        </form>
+      </section>
+
+      <hr>
+
+      <!-- Forth subtitle styled here-->
+      
+      <section>
+        <h3>
+          <center>
+            <strong>
+              <u>
+                <span style="color: darkblue">
+                  Your Trends
+                </span>
+              </u>
+            </strong>
+          </center>
+        </h3>
+      </section>
+
+      <!-- later, if possible, make graphs of each trait over time, 
+       or else just a table of old days' data-->
+
+      <br>
+      <hr>
+
+      <section>
+        <h3>
+          <center>
+            <strong>
+              <u>
+                <span style="color: darkblue">
+                  Health Streaks
+                </span>
+              </u>
+            </strong>
+          </center>
+        </h3>
+      </section>
+
+      <section>
+        <div>
+          <p>Water Streak</p>
+
+          <p>Sleep Streak</p>
+
+          <p>Meal Streak</p>
+
+          <p>Exercise Streak</p>
+        </div>
+
+        <p>Overall Health Streak</p>
+      </section>
+
+      <section>
+        <p>[insert longest streak number] days highest streak!!</p>
+      </section>
+
+      <hr>
+      
+      <!--Contains the footer of the webpage with two statements-->
+      </main>
+      <footer>
+        <br><br>
+
+        <!-- Image aligned to the right -->
+        <img src="https://uploads.onecompiler.io/44c4rfedh/44bzmu2a6/liventure%20logo.png" alt="Liventure logo" width="80" height="80" align="right">
+
+        <center>
+          <i>
+            All Rights Reserved 2026
+            <br><br>
+            <cite>
+              Copyright &copy; zasigmas group project
+            </cite>
+          </i>
+        </center>
+      </footer>
+      
+      <br>
+      <hr>
+
+  </body>
+</html>
