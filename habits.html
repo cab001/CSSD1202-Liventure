@@ -113,35 +113,42 @@
           </div>
           <br>
           
-          <!--Requests Phone number from user-->
+          <!--Requests water amount from user-->
           
           <div>
-            <label for="phonenum">Phone Number:</label>
-            <input type="tel" id="phonenum" name="phonenum"
-                   placeholder="e.g (123)-456-7891">
+            <label for="water">Oz of Water:</label>
+            <input type="number" id="water" name="water"
+                   value="0">
           </div>
           
           <br>
           
-          <!--Requests Date the form is submitted from user-->
+          <!--Requests sleep amount from user-->
           
           <div>
-            <label for="datesent">Date:</label>
-            <input type="date" id="datesent" name="datesent">
+            <label for="sleep">Hours of Sleep:</label>
+            <input type="number" id="sleep" name="sleep"
+                   value="0">
           </div>
           
           <br>
-          
-          <!--Requests inquiries from user and whether they would prefer an email response or call-->
+
+          <!--Requests meal amount from user-->
           
           <div>
-            <label for="inquiry">
-              Write your question/questions below. Would you prefer to receive an email or call?
-            </label>
-            <br>
-            <textarea id="inquiry" name="inquiry"
-                      placeholder="Write your question/questions here"
-                      rows="25" cols="75"></textarea>
+            <label for="meals">Number of Meals:</label>
+            <input type="number" id="meals" name="meals"
+                   value="0">
+          </div>
+          
+          <br>
+
+          <!--Requests exercise amount from user-->
+          
+          <div>
+            <label for="exercise">Minutes of Exercise:</label>
+            <input type="number" id="exercise" name="exercise"
+                   value="0">
           </div>
           
           <br>
@@ -155,6 +162,175 @@
       </section>
 
       <br>
+
+      <!--Form that posts results of what stats to track, to another file-->
+      
+      <section>
+        <form method="POST" action="something.com">
+
+          <fieldset>
+            <legend>Stats to track:</legend>
+
+            <div>
+              <label for="waterToggle">Water</label>
+              <input type="checkbox" id="waterToggle" name="waterToggle">
+            </div>
+
+            <div>
+              <label for="sleepToggle">Sleep</label>
+              <input type="checkbox" id="sleepToggle" name="sleepToggle">
+            </div>
+
+            <div>
+              <label for="mealsToggle">Meals</label>
+              <input type="checkbox" id="mealsToggle" name="mealsToggle">
+            </div>
+
+            <div>
+              <label for="exerciseToggle">Exercise</label>
+              <input type="checkbox" id="exerciseToggle" name="exerciseToggle">
+            </div>
+
+            <!-- for the user to add custom stats to track -- only implement if we have time -- else delete-->
+            <div>
+              <label for="customStat">
+                <label for="customStatName">Stat you want to track:</label>
+                <input type="text" id="customStatName" name="customStatName"
+                       placeholder="ex. Time Outdoors">
+              </label>
+              <input type="checkbox" id="customStat" name="customStat">
+            </div>
+
+            <br>
+
+            <!--submits all info once form is completed-->
+          
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+      <hr>
+
+      <!-- Third subtitle styled here-->
+      
+      <section>
+        <h3>
+          <center>
+            <strong>
+              <u>
+                <span style="color: darkblue">
+                  Goals:
+                </span>
+              </u>
+            </strong>
+          </center>
+        </h3>
+      </section>
+
+      <!--Form that posts results of the goals of the user for each stat to another file-->
+
+      <section>
+        <form method="POST" action="something.com">
+          
+          <div>
+            <label for="waterGoal">Water:</label>
+            <input type="number" id="waterGoal" name="waterGoal"
+                   placeholder="60">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="sleepGoal">Sleep:</label>
+            <input type="number" id="sleepGoal" name="sleepGoal"
+                   placeholder="7">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="mealsGoal">Meals:</label>
+            <input type="number" id="mealsGoal" name="mealsGoal"
+                   placeholder="3">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="exerciseGoal">Water:</label>
+            <input type="number" id="exerciseGoal" name="exerciseGoal"
+                   placeholder="30">
+          </div>
+
+          <br>
+
+          <!--submits all info once form is completed-->
+          
+            <div>
+              <input type="submit" value="Submit">
+            </div>
+        </form>
+      </section>
+
+      <hr>
+
+      <!-- Forth subtitle styled here-->
+      
+      <section>
+        <h3>
+          <center>
+            <strong>
+              <u>
+                <span style="color: darkblue">
+                  Your Trends
+                </span>
+              </u>
+            </strong>
+          </center>
+        </h3>
+      </section>
+
+      <!-- later, if possible, make graphs of each trait over time, 
+       or else just a table of old days' data-->
+
+      <br>
+      <hr>
+
+      <section>
+        <h3>
+          <center>
+            <strong>
+              <u>
+                <span style="color: darkblue">
+                  Health Streaks
+                </span>
+              </u>
+            </strong>
+          </center>
+        </h3>
+      </section>
+
+      <section>
+        <div>
+          <p>Water Streak</p>
+
+          <p>Sleep Streak</p>
+
+          <p>Meal Streak</p>
+
+          <p>Exercise Streak</p>
+        </div>
+
+        <p>Overall Health Streak</p>
+      </section>
+
+      <section>
+        <p>[insert longest streak number] days highest streak!!</p>
+      </section>
+
       <hr>
       
       <!--Contains the footer of the webpage with two statements-->
