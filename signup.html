@@ -22,20 +22,75 @@
 
         <hr>
 
+        <center>
         <!--Main Title of Page-->
         <section>
-            <center>
-                <h1>Sign Up Form</h1>
-            </center>
+            <h1>Sign Up Form</h1>
         </section>
 
         <!--Description-->
         <section>
-            <center>
-                <p>
-                    Fill out the following information to sign up for a new Liventure journey!!
-                </p>
-            </center>
+            <p>
+                Fill out the following information to sign up for a new Liventure journey!!
+            </p>
         </section>
+
+        <!--Form-->
+        <section>
+            <form action="signupform.txt" method="post">
+                <p>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username">
+                </p>
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password">
+                </p>
+                <p>
+                    <label for="pronouns">Pronouns:</label>
+                    <input type="text" name="pronouns" id="pronouns" placeholder="They/Them">
+                </p>
+                <p>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" name="birthday" id="birthday">
+                </p>
+                <p>
+                    <label for="getToKnow">Some fun facts about yourself!:</label>
+                    <textarea name="getToKnow" id="getToKnow" placeholder="Type your message here..." rows="5" cols="30"></textarea>
+                </p>
+                <p>
+                    <label for="goals">Goals for this journey!:</label>
+                    <input type="text" name="goals" id="goals" placeholder="Learning healthy habits">
+                </p>
+                <p>
+                    <input type="submit">
+                </p>
+            </form>
+        </section>
+
+        <!--epmty space-->
+        <br><br>
+        <hr>
+
+        <!-- Footer containing copyright information and website logo -->
+        <section>
+            <footer>
+                <br><br>
+
+                <!-- Image aligned to the right -->
+                <img src="https://uploads.onecompiler.io/44c4rfedh/44bzmu2a6/liventure%20logo.png" alt="Liventure logo" width="80" height="80" align="right">
+
+                <i>
+                    All Rights Reserved 2026
+                    <br><br>
+                    <cite>
+                        Copyright &copy; zasigmas group project
+                    </cite>
+                </i>
+                <br>
+                <hr>
+            </footer>
+        </section>
+        </center>
     </body>
 </html>
