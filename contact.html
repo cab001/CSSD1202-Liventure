@@ -1,10 +1,11 @@
-<!--1/31/2026 2:00pm updated contact html (v4)-->
+<!--3/12/2026 8:40pm updated contact html (v5)-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Title of html doc-->
     <title>Contact Us</title>
     <meta charset="utf-8">
+    <link href="contact.css" rel="stylesheet">
   </head>
 
   <body>
@@ -12,47 +13,46 @@
     <!-- Navigation Links to other webpages in the website-->
       <section>
         <nav>
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="profile.html">Profile</a>
-          <a href="achievements.html">Achievements</a>
-          <a href="habits.html">Habits Log</a>
-          <a href="money.html">Money Manager</a>
-          <a href="productivearena.html">Productivity Arena</a>
-          <a href="signup.html">Sign Up!</a>
+          <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="habits.html">Habits Log</a></li>
+            <li><a href="money.html">Money Manager</a></li>
+            <li><a href="productivearena.html">Productivity Arena</a></li>
+            <li><a href="signup.html">Sign Up!</a></li>
+          </ul>
         </nav>
-        <hr>
       </section>
-      
       <!--Title of webpage-->
-      
-      <section>
+     <div id="head">
+     </div>
+      <img src="https://uploads.onecompiler.io/44c4rfedh/44fyetgby/hr.png"
+     class="divider">
+      <section class="cyber-panel">
         <h1>Contact Us</h1>
       </section>
-      
+      <br>
       <!--Brief description of webpage-->
-      
+      <br>
       <section>
-        <hr>
         <em>This page contains information on contacting our support team</em>
-        <hr>
       </section>
       
       <!--Contains and styles first subtitle-->
-      
+      <br>
       <section>
-        <h3>
-          <center>
+        <div style="text-align:center;">
+          <h3>
             <b>
               <u>
-                <span style="color: darkblue">
-                  Need Urgent Support?
-                </span>
+                Need Urgent Support?
               </u>
             </b>
-          </center>
-        </h3>
+          </h3>
+        </div>
       </section>
 
       <!--List that contains contact info for urgent assistance associated to website-->
@@ -61,7 +61,7 @@
         <ul>
           <li>
             For immediate assistance with navigating the website, please contact
-            <strong><u>(676)-767-6767</u></strong> or email client support at
+            <strong class="phoneNum"><u>(676)-767-6767</u></strong> or email client support at
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammad676767@gmail.com">
               muhammad676767@gmail.com
             </a>
@@ -70,7 +70,7 @@
 
           <li>
             For immediate assistance with account issues, please contact
-            <strong><u>(123)-456-7890</u></strong> or email client support at
+            <strong class="phoneNum"><u>(123)-456-7890</u></strong> or email client support at
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammad676767@gmail.com">
               muhammad676767@gmail.com
             </a>
@@ -79,15 +79,13 @@
 
           <li>
             For urgent assistance, please contact
-            <strong><u>(987)-654-3210</u></strong> or email client support at
+            <strong class="phoneNum"><u>(987)-654-3210</u></strong> or email client support at
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammad676767@gmail.com">
               muhammad676767@gmail.com
             </a>
           </li>
         </ul>
       </section>
-
-      <hr>
       
       <!-- Second subtitle styled here-->
       
@@ -96,19 +94,20 @@
           <center>
             <strong>
               <u>
-                <span style="color: darkblue">
+                <div style="text-align:center">
                   For General Inquiries Fill In The Form Below To Receive An Email Response or Call in 24 Hours
-                </span>
+                </div>
               </u>
             </strong>
           </center>
         </h3>
       </section>
-      
+      <br>
+      <br>
       <!-- Form that posts results from form to another file-->
       
       <section>
-        <form method="POST" action="text_files/forminfo.txt">
+        <form method="POST" action="textfiles/forminfo.txt">
           
           <!--Requests Email address from user-->
           
@@ -163,29 +162,23 @@
       </section>
 
       <br>
-      <hr>
       
       <!--Contains the footer of the webpage with two statements-->
       </main>
       <footer>
         <br><br>
 
-        <!-- Image aligned to the right -->
-        <img src="https://uploads.onecompiler.io/44c4rfedh/44bzmu2a6/liventure%20logo.png" alt="Liventure logo" width="80" height="80" align="right">
-
-        <center>
-          <i>
-            All Rights Reserved 2026
-            <br><br>
-            <cite>
-              Copyright &copy; zasigmas group project
-            </cite>
-          </i>
-        </center>
+        <i>
+          All Rights Reserved 2026
+          <br>
+          <br>
+          <cite>
+            Copyright &copy; zasigmas group project
+          </cite>
+        </i>
       </footer>
-      
       <br>
-      <hr>
+      <br>
 
   </body>
 </html>
