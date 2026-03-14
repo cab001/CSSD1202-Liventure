@@ -4,94 +4,96 @@
         <meta charset="utf-8">
         <title>Sign Up Form</title>
         <link href="productivearena.css" rel="stylesheet" type="text/css">
+        <link href="main.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="images/favicon.png" rel="icon"  type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
     <body>
         <!-- Navigation Links to other webpages-->
     
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="profile.html">Profile</a>
-            <a href="achievements.html">Achievements</a>
-            <a href="habits.html">Habits Log</a>
-            <a href="money.html">Money Manager</a>
-            <a href="productivearena.html">Productivity Arena</a>
-            <a href="signup.html">Sign Up!</a>
+            <ul class="my-navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="habits.html">Habits Log</a></li>
+                <li><a href="money.html">Money Manager</a></li>
+                <li><a href="productivearena.html">Productivity Arena</a></li>
+                <li><a href="signup.html">Sign Up!</a></li>
+            </ul>
         </nav>
 
-        <hr>
 
-        <center>
         <!--Main Title of Page-->
-        <section>
-            <h1>Productivity Arena</h1>
-            <p>Track you progress!!</p>
-        </section>
+        <main>
+            <div id="head">
+            </div>
+            <img src="https://uploads.onecompiler.io/44c4rfedh/44fyetgby/hr.png"
+            class="divider">
+            <section>
+                <h1>Productivity Arena</h1>
+                <p>Track you progress!!</p>
+            </section>
 
         <!--Description-->
-        <section>
-            <p>
-                Here you can keep track of all goals and progress that you are making!
-            </p>
-        </section>
-    </center>
+            <section>
+                <p>
+                    Here you can keep track of all goals and progress that you are making!
+                </p>
+            </section>
 
         <!--Form-->
-        <section>
-            <form action="text_files/goals.txt" method="post">
-                <p>
-                    <label for="addTask">Add tasks/goals:</label>
-                    <input type="text" name="addTask" id="addTask">
-                </p>
-                <p>
-                    <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 1</label>
-                </p>
-                <p>
-                    <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 2</label>
-                </p>
-                <p>
-                    <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 3</label>
-                </p>
-                <p>
-                    <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 4</label>
-                </p>
-            </form>
-        </section>
+            <section>
+                <form action="text_files/goals.txt" method="post">
+                    <p>
+                        <label for="addTask">Add tasks/goals:</label>
+                        <input type="text" name="addTask" id="addTask">
+                    </p>
+                    <p>
+                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 1</label>
+                    </p>
+                    <p>
+                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 2</label>
+                    </p>
+                    <p>
+                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 3</label>
+                    </p>
+                    <p>
+                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 4</label>
+                    </p>
+                </form>
+            </section>
 
         <!--rewards-->
-        <section>
             <h2>Achievements</h2>
-            <img src="images/UnlockedReward.png" alt="Reward unlocked image" height="200" width="200">
-            <img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200">
-            <img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200">
-            <img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200">
-        </section>
-
+            <div id="image-grid">
+                <div><img src="images/UnlockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
+                <div><img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
+                <div><img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
+                <div><img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
+            </div>
+        </main>
         <!--epmty space-->
         <br><br>
-        <hr>
-
+        
         <!-- Footer containing copyright information and website logo -->
-        <section>
-            <footer>
+        <footer>
+            <br><br>
+            <i>
+                All Rights Reserved 2026
                 <br><br>
-
-                <!-- Image aligned to the right -->
-                <img src="https://uploads.onecompiler.io/44c4rfedh/44bzmu2a6/liventure%20logo.png" alt="Liventure logo" width="80" height="80" align="right">
-
-                <i>
-                    All Rights Reserved 2026
-                    <br><br>
-                    <cite>
-                        Copyright &copy; zasigmas group project
-                    </cite>
-                </i>
-                <br>
-                <hr>
-            </footer>
-        </section>
+                <cite>
+                    Copyright &copy; zasigmas group project
+                </cite>
+            </i>
+            <br>
+            <hr>
+        </footer>
         
     </body>
 </html>

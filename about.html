@@ -5,6 +5,11 @@
   <head>
     <title>About Us</title>
     <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="images/favicon.png" rel="icon"  type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   
   
@@ -15,54 +20,57 @@
     <!-- Navigation links to webpages in website-->
       
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="profile.html">Profile</a>
-      <a href="achievements.html">Achievements</a>
-      <a href="habits.html">Habits Log</a>
-      <a href="money.html">Money Manager</a>
-      <a href="productivearena.html">Productivity Arena</a>
-      <a href="signup.html">Sign Up!</a>
+      <ul class="my-navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="habits.html">Habits Log</a></li>
+        <li><a href="money.html">Money Manager</a></li>
+        <li><a href="productivearena.html">Productivity Arena</a></li>
+        <li><a href="signup.html">Sign Up!</a></li>
+      </ul>
     </nav>
     
 
-    <hr>
+
       
       <!-- Header of Webpage-->
     <main>
+    <div id="head">
+    </div>
+      <img src="https://uploads.onecompiler.io/44c4rfedh/44fyetgby/hr.png"
+     class="divider">
       <section>
         <h1>About Us</h1>
       </section>
       
-      
-      <hr>
+
       
       <!-- Brief Description of webpage contents-->
-      
+      <br>
+      <br>
       <section>
         <em>
           This page contains information about the organization/website and useful resources
         </em>
       </section>
+      <br>
       
-      
-      <hr>
+
       
       <!--Stylized question header put in the center-->
-      <!-- to do: might need to change h3 headers to h2 and switch the header and center tags to avoid errors on the checker-->
-       
+     
       <section>
         <h3>
-          <center>
-            <b>
-              <u>
-                <span style="color:darkblue">
-                  What Is This Website?
-                </span>
-              </u>
-            </b>
-          </center>
+          <b>
+            <u>
+              <span>
+                What Is This Website?
+              </span>
+            </u>
+          </b>
         </h3>
       </section>
       
@@ -97,7 +105,11 @@
             </tr>
             <tr>
               <td>
-                <img src="https://uploads.onecompiler.io/44c4rfedh/44bzmu2a6/victory.png" alt="victory" width="300" height="200">
+                <picture>
+                  <source media="(min-width:400px)" srcset="https://uploads.onecompiler.io/44c4rfedh/44fyetgby/victory_1200.png">
+                  <source media="(min-width:600px)" srcset="https://uploads.onecompiler.io/44c4rfedh/44fyetgby/victory_1800png.png">
+                  <img src="https://uploads.onecompiler.io/44c4rfedh/44bzmu2a6/victory.png" srcset="https://uploads.onecompiler.io/44c4rfedh/44fyetgby/victory_1200.png 2x, https://uploads.onecompiler.io/44c4rfedh/44fyetgby/victory_1800png.png 3x" alt="victory" width="300" height="200">
+                </picture>
               </td>
             </tr>
           </table>
@@ -106,7 +118,7 @@
       
       
       <br>
-      <hr>
+
       
       <!--Stylized question header centered-->
       
@@ -115,7 +127,7 @@
           <h3>
             <b>
               <u>
-                <span style="color:darkblue">
+                <span>
                   About The Creators
                 </span>
               </u>
@@ -135,20 +147,21 @@
         </p>
       </section>
       
-      
-      <hr>
+
       
       
     </main>
     
     <!-- Title for Additional Resources table-->
+    <br>
+    <br>
     <aside>
       <section>
         <center>
           <h3>
             <b>
               <u>
-                <span style="color: darkblue">
+                <span>
                   Need More Help Smashing Your Goals?
                 </span>
               </u>
@@ -198,7 +211,7 @@
                 </ul>
               </td>
               <td>
-                <a href="https://www.atlassian.com/blog/productivity/how-to-write-smart-goals">https://www.atlassian.com/blog/productivity/how-to-write-smart-goals</a>
+                <a id="tab1" href="https://www.atlassian.com/blog/productivity/how-to-write-smart-goals">https://www.atlassian.com/blog/productivity/how-to-write-smart-goals</a>
               </td>
             </tr>
             <tr>
@@ -214,7 +227,7 @@
                 </ul>
               </td>
               <td>
-                <a href="https://jamesclear.com/habits">https://jamesclear.com/habits</a>
+                <a id="tab2" href="https://jamesclear.com/habits">https://jamesclear.com/habits</a>
               </td>
             </tr>
             <tr>
@@ -232,7 +245,7 @@
                 </ul>
               </td>
               <td>
-                <a href="https://www.investopedia.com/personal-finance-4427760">https://www.investopedia.com/personal-finance-4427760</a>
+                <a id="tab3" href="https://www.investopedia.com/personal-finance-4427760">https://www.investopedia.com/personal-finance-4427760</a>
               </td>
             </tr>
           </table>
@@ -247,8 +260,6 @@
       <footer>
         <br><br>
 
-        <!-- Image aligned to the right -->
-        <img src="https://uploads.onecompiler.io/44c4rfedh/44bzmu2a6/liventure%20logo.png" alt="Liventure logo" width="80" height="80" align="right">
 
         <center>
           <i>
@@ -260,7 +271,6 @@
           </i>
         </center>
         <br>
-        <hr>
       </footer>
   </body>
 </html>
