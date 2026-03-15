@@ -326,6 +326,11 @@ td {
     background-attachment: fixed;
     }
 
+    /* wanna fix the nav bar not narrowing w viewport (narrows too fast) -> try making itw width 100%?
+    then make LIVENTURE pic smaller or responsive
+    then fix the heading sizes (make them way smaller XD)*/
+    
+
 
 }
 
