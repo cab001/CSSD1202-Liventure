@@ -230,7 +230,7 @@ input:invalid {
 }
 
 table, th, td {
-  border: 3px solid #FF46A2;
+  border: 1px solid #FF46A2;
 }
 
 table {
@@ -254,6 +254,10 @@ tr:nth-child(odd) {
   background-color: #FF7F50;
 }
 
+td {
+  padding: 1vw;
+}
+
 .float-left {
   float: left;
 }
@@ -267,6 +271,97 @@ tr:nth-child(odd) {
   justify-content: center;
   padding: 10px;
 }
+
+/* breakpoints for phones */
+
+/* for phones with screens <=319px wide in portrait mode*/
+@media all and (max-width: 319px) and (orientation: portrait) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /*makes all sections on top of each other*/
+  main,
+  aside,
+  nav,
+  footer {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+  }
+
+  /* nav and li css */
+  body > nav > ul.my-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 3px;
+    
+  }
+
+  ul.my-navbar > li > a {
+  position: relative;
+  text-decoration: none;
+  color: pink;
+  text-shadow: 0 0 15px pink;
+  text-transform: var(--heading-text-transform);
+  padding: 8px 5px;
+  }
+
+  li {
+  position: relative;
+  font-size: 9px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-indent: 0px;
+  }
+
+  body > nav {
+    background-image: url("https://uploads.onecompiler.io/44c4rfedh/44fyetgby/Gemini_Generated_Image_1pu0sj1pu0sj1pu0.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+    /* wanna fix the nav bar not narrowing w viewport (narrows too fast) -> try making itw width 100%?
+    then make LIVENTURE pic smaller or responsive
+    then fix the heading sizes (make them way smaller XD)*/
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+/* breakpoints for laptops */
+
+/*@media all and (max-width: 319px){
+  body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main,
+  aside,
+  nav,
+  footer {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+  }
+  section > nav > ul.my-navbar {
+    flex-direction: row;
+  }
+}*/
 
 @media all and (min-width: 320px) and (max-width: 480px) {
   body {
