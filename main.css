@@ -279,6 +279,8 @@ td {
   body {
     display: flex;
     flex-wrap: wrap;
+    margin: 0px;
+    border: 0px;
   }
 
   /*makes all sections on top of each other*/
@@ -290,6 +292,7 @@ td {
     flex-grow: 1;
     flex-shrink: 1;
     position: relative;
+    width: 100%;
   }
 
   /* nav and li css */
@@ -326,11 +329,445 @@ td {
     background-attachment: fixed;
     }
 
-    /* wanna fix the nav bar not narrowing w viewport (narrows too fast) -> try making itw width 100%?
+    #head {
+  position: relative;
+  background-image: url("https://uploads.onecompiler.io/44c4rfedh/44fyetgby/gg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  width: 100%;
+  height: 100px;
+}
+
+    /* wanna fix the body being too big -> make all emements not have a fixed width?
     then make LIVENTURE pic smaller or responsive
     then fix the heading sizes (make them way smaller XD)*/
-    
+    /* also wanna fix how the h1 overlaps with itself at 220px width */
+  h1 {
+    position: relative;
+    display: inline;
+    color: var(--main-text-color);
+    text-align: left;
+    text-shadow: 0 0 12px cyan;
+    font-weight: bold;
+    text-transform: var(--heading-text-transform);
+    border: 5px ridge rgb(124, 217, 189);
+    padding: 5px;
+    box-shadow: 0 0 8px cyan;
+    background-color: #ca5dfc;
+    font-size: 12px;
+}
+  section > em {
+    font-size: 10px;
+  }
 
+  h3 {
+    font-size: 11px;
+ 
+  }
+
+  section > p {
+    font-size: 10px;
+  }
+
+  a > button > strong {
+    font-size: 10px;
+  }
+
+  a > button {
+    padding-inline: 5px;
+  }
+
+  #navigation-module {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+
+  tr > td > picture > img {
+    width: auto;
+    height: auto;
+    max-width: 100%; 
+  }
+
+  section > center > table {
+    font-size: 8px;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  section > center > table > tbody > tr > td > ul {
+    padding-inline-start: 7px;
+  }
+
+  aside {
+    background-image: url("https://uploads.onecompiler.io/44c4rfedh/44fyetgby/Gemini_Generated_Image_1pu0sj1pu0sj1pu0.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  th, td {
+    width: 25%;
+    word-wrap: break-word;
+  }
+
+  table, th, td {
+  border: 0px;
+  }
+
+  /* form elements */
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="password"] {
+    position: relative;
+    box-sizing: border-box;
+    width: 150px;
+    padding: 10px;
+    margin-left: 25px;
+    border: 5px inset cyan;
+    border-radius: 4px;
+    box-shadow: 0 0 6px yellow;
+  }
+  
+  textarea {
+    width: 80%;
+    margin: 25px;
+  }
+
+  /* submit button css */
+  input[type="submit"] {
+    position: relative;
+    margin: 25px;
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 12px blue;
+}
+
+/* giving input areas margins so they're aligned with the labels */
+#sleep, #meals, #exercise {
+  margin-left: 25px;
+}
+
+@media all and (max-width: 311px) {
+  #water {
+    margin-left: 25px;
+  }
+}
+
+section > form > div > input {
+  margin-left: 25px;
+}
+
+#money-page-info {
+  display: flex;
+  flex-direction: row;
+}
+
+#money-page-info > img {
+  height: 25vh;
+  width: 20vh;
+}
+
+ table {
+    font-size: 8px;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  table > tbody > tr > td > ul {
+    padding-inline-start: 7px;
+  }
+
+  p {
+    font-size: 8px;
+  }
+  
+  cite {
+    font-size: 7px;
+  }
+
+  #image-grid > div > img {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    color: cyan;
+    text-transform: var(--heading-text-transform);
+    text-shadow: 0 0 12px cyan;
+    margin: 0;
+    padding: 5px 10px;
+    border: 5px ridge rgb(124, 217, 189);
+    box-shadow: 0 0 6px cyan;
+    background-color: #ca5dfc;
+    line-height: 1;
+    font-size: 15px;
+  }
+}
+
+/* for phones with screens >319px wide in portrait mode*/
+@media all and (min-width: 320px) and (orientation: portrait) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    border: 0px;
+  }
+
+  /*makes all sections on top of each other*/
+  main,
+  aside,
+  nav,
+  footer {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    position: relative;
+    width: 100%;
+  }
+
+  /* nav and li css */
+  body > nav > ul.my-navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 1vh;
+    
+  }
+
+  ul.my-navbar > li > a {
+  position: relative;
+  text-decoration: none;
+  color: pink;
+  text-shadow: 0 0 15px pink;
+  text-transform: var(--heading-text-transform);
+  padding: 8px 5px;
+  }
+
+  li {
+  position: relative;
+  font-size: 3vw;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-indent: 0px;
+  }
+
+  body > nav {
+    background-image: url("https://uploads.onecompiler.io/44c4rfedh/44fyetgby/Gemini_Generated_Image_1pu0sj1pu0sj1pu0.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+    #head {
+    position: relative;
+    background-image: url("https://uploads.onecompiler.io/44c4rfedh/44fyetgby/gg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    width: 100%;
+    height: 20vh;
+  }
+
+    /* wanna fix the body being too big -> make all emements not have a fixed width?
+    then make LIVENTURE pic smaller or responsive
+    then fix the heading sizes (make them way smaller XD)*/
+    /* also wanna fix how the h1 overlaps with itself at 220px width */
+  h1 {
+    position: relative;
+    display: inline;
+    color: var(--main-text-color);
+    text-align: left;
+    text-shadow: 0 0 12px cyan;
+    font-weight: bold;
+    text-transform: var(--heading-text-transform);
+    border: 5px ridge rgb(124, 217, 189);
+    padding: 5px;
+    box-shadow: 0 0 8px cyan;
+    background-color: #ca5dfc;
+    font-size: 4vw;
+}
+  section > em {
+    font-size: 3vw;
+  }
+
+  h3 {
+    font-size: 3.5vw;
+ 
+  }
+
+  section > p {
+    font-size: 3vw;
+  }
+
+  a > button > strong {
+    font-size: 3vw;
+  }
+
+  a > button {
+    padding-inline: 5px;
+  }
+
+  #navigation-module {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    font-size: 3vw;
+  }
+
+  tr > td > picture > img {
+    width: auto;
+    height: auto;
+    max-width: 100%; 
+  }
+
+  section > center > table {
+    font-size: 3vw;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  section > center > table > tbody > tr > td > ul {
+    padding-inline-start: 7px;
+  }
+
+  aside {
+    background-image: url("https://uploads.onecompiler.io/44c4rfedh/44fyetgby/Gemini_Generated_Image_1pu0sj1pu0sj1pu0.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  th, td {
+    width: 25%;
+    word-wrap: break-word;
+  }
+
+  table, th, td {
+  border: 0px;
+  }
+
+  /* form elements */
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="password"] {
+    position: relative;
+    box-sizing: border-box;
+    width: 150px;
+    padding: 10px;
+    margin-left: 25px;
+    border: 5px inset cyan;
+    border-radius: 4px;
+    box-shadow: 0 0 6px yellow;
+  }
+  
+  textarea {
+    width: 80%;
+    margin: 25px;
+  }
+
+  /* submit button css */
+  input[type="submit"] {
+    position: relative;
+    margin: 25px;
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 12px blue;
+}
+
+/* giving input areas margins so they're aligned with the labels */
+#sleep, #meals, #exercise {
+  margin-left: 25px;
+}
+
+@media all and (max-width: 311px) {
+  #water {
+    margin-left: 25px;
+  }
+}
+
+section > form > div > input {
+  margin-left: 25px;
+}
+
+#money-page-info {
+  display: flex;
+  flex-direction: row;
+}
+
+#money-page-info > img {
+  height: 25vh;
+  width: 20vh;
+}
+
+ table {
+    font-size: 3vw;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  table tbody > tr > td > cite {
+    font-size: 3vw;
+  }
+
+  table > tbody > tr > td > ul {
+    padding-inline-start: 7px;
+  }
+
+  p {
+    font-size: 2.5vw;
+  }
+  
+  cite {
+    font-size: 2.5vw;
+  }
+
+  #image-grid > div > img {
+    height: 40vw;
+    width: 40vw;
+  }
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    color: cyan;
+    text-transform: var(--heading-text-transform);
+    text-shadow: 0 0 12px cyan;
+    margin: 0;
+    padding: 5px 10px;
+    border: 5px ridge rgb(124, 217, 189);
+    box-shadow: 0 0 6px cyan;
+    background-color: #ca5dfc;
+    line-height: 1;
+    font-size: 3.5vw;
+  }
 
 }
 
@@ -344,7 +781,7 @@ td {
 
 /* breakpoints for laptops */
 
-/*@media all and (max-width: 319px){
+@media all and (max-width: 319px){
   body {
     display: flex;
     flex-wrap: wrap;
@@ -361,7 +798,7 @@ td {
   section > nav > ul.my-navbar {
     flex-direction: row;
   }
-}*/
+}
 
 @media all and (min-width: 320px) and (max-width: 480px) {
   body {
