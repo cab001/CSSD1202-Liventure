@@ -73,7 +73,75 @@ function checkToggles() {
         exerciseGoal.classList.add("hide");
         exerciseStrLabel.classList.add("hide");
     }
+    // check list of custom stat toggles (has class .customStatToggles)
 }
+
+// adding custom stat: idea: remove checkbox from the side, 
+// just make the input a box to write the name of the stat, 
+// then add a ADD button that will add the value of the input box as a stat name in todays stats and goals
+// also add a REMOVE button to remove (most recent?) custom stat,
+//  and maybe an alert that prevents default stats from being removed? 
+// and/or an x button beside each stat to track 
+// so u can hide(if default) or delete stats
+
+// also can add alert when they try to make an empty-string named stat
+
+let customStatInput = document.querySelector("#customStatName");
+let addStatBtn = document.querySelector("#addStat");
+let toggles = document.querySelector("#toggles");
+let dailyStats = document.querySelector("#dailyStats");
+
+addStatBtn.addEventListener("click", createNewStat);
+
+function createNewStat() {
+    if (customStatInput.value == "") {
+        alert("‼I cannot add a stat with no name‼");
+    }
+    else {
+        let newStatToggle = document.createElement("input");
+        let newStatToggleLabel = document.createElement("label");
+        let newStatToggleDiv = document.createElement("div");
+
+        let dailyNewStat = document.createElement("div");
+        let newStat = document.createElement("input");
+        let newStatLabel = document.createElement("label");
+
+        let newStatGoalDiv = document.createElement("div");
+        let newStatGoal = document.createElement("input");
+        let newStatGoalLabel = document.createElement("label");
+
+        let newStatStrLabel = document.createElement("p");
+
+        newStatToggle.type = "checkbox";
+        newStatToggle.checked = true;
+        newStatToggle.classList.add("customStatsToggles");
+        newStatToggleLabel.textContent = customStatInput.value;
+        newStatToggleLabel.appendChild(newStatToggle);
+        newStatToggleDiv.appendChild(newStatToggleLabel);
+        toggles.appendChild(newStatToggleDiv);
+
+        newStatLabel.textContent = customStatInput.value;
+        newStat.type = "number";
+        newStat.value = "0";
+        newStatLabel.appendChild(newStat);
+        dailyNewStat.appendChild(newStatLabel);
+        dailyStats.appendChild(dailyNewStat);
+
+        //next, append newStatGoal stuff and newStatStreak stuff
+    }
+    if (customStatInput == "no") {
+        alert("yes");
+        // could add an achievement for this so the user has some easter eggs to find ^^
+    }
+    customStatInput.value = "";
+}
+
+
+
+
+
+
+
 
 // idea: set all values of "today's stats" back to 0 when its the next day
 // since that is not flashy, we can also alert them when its a new day!!
@@ -90,6 +158,7 @@ let exerciseStreak = 0;
 
 function newDay() {
     // if value of stat greater than goal by reset time, streak += 1;
+        // and maybe also for now log the last 3 days of stats under trends
     // then set all daily stats to 0
     water.value = 0;
     sleep.value = 0;
@@ -100,7 +169,12 @@ function newDay() {
 }
 
 // MAKE FUNCTIONS THAT PREVENT FORM SUBMISSION 
-//  UNLESS WE FIGFURE OUT HOW TO ACTUALLY USE THE DATA SENT FROM SUBMITTING FORM
-//  CUZ OTHERWISE ERROR
+//  UNLESS WE FIGURE OUT HOW TO ACTUALLY USE THE DATA SENT FROM SUBMITTING FORM
+//  OTHERWISE THERE WILL BE AN ERROR
+window.addEventListener("submit", submitHandler);
+
+function submitHandler(event) {
+    event.preventDefault();
+}
 
 // maybe add min of 0 for all default stats in html or add an alert for typing "-"

@@ -17,3 +17,4 @@ function mouseoutBtnHandler(event) {
 
 // if have time, can make customizable avatar, and when hover over a hair option of the user's choice, replace the current choice with the one being hovered
 // ex. if they have short hair equipped but their mouse is hovering over the long hair, show the long hair and hide the short hair
+// otherwise just add a picture for a default avatar in the html
