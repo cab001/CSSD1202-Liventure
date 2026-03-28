@@ -102,3 +102,5 @@ function newDay() {
 // MAKE FUNCTIONS THAT PREVENT FORM SUBMISSION 
 //  UNLESS WE FIGFURE OUT HOW TO ACTUALLY USE THE DATA SENT FROM SUBMITTING FORM
 //  CUZ OTHERWISE ERROR
+
+// maybe add min of 0 for all default stats in html or add an alert for typing "-"
