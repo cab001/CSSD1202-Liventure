@@ -1,3 +1,12 @@
+/* classes that are added/removed via js */
+.hide {
+  display: none;
+}
+
+
+
+
+/* default css */
 :root {
   --main-text-color: cyan;
   --main-font-family: "Courier New", Courier, monospace;
