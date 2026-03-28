@@ -15,9 +15,9 @@ mealsToggle.addEventListener("click", checkToggles);
 exerciseToggle.addEventListener("click", checkToggles);
 
 let dailyWater = document.getElementById("dailyWater");
-let dailySleep = document.getElementById("sleep");
-let dailyMeals = document.getElementById("meals");
-let dailyExercise = document.getElementById("exercise");
+let dailySleep = document.getElementById("dailySleep");
+let dailyMeals = document.getElementById("dailyMeals");
+let dailyExercise = document.getElementById("dailyExercise");
 
 let waterGoalDiv = document.getElementById("waterGoalDiv");
 let sleepGoal = document.getElementById("sleepGoal");
