@@ -102,7 +102,7 @@
       <!-- and the numbers for the Today's Stats section can be user inputted (text/form box?) (and maybe submitted at end of day? idk)-->
       <!-- same thing for the numbers in Goals section, and the text in Goals would depend on the checkboxes from earlier ? if possible-->
       <section>
-        <form method="POST" action="something.com">
+        <form method="POST">
           
           <!--Requests Email address from user-->
           
@@ -168,7 +168,7 @@
       <!--Form that posts results of what stats to track, to another file-->
       
       <section>
-        <form method="POST" action="something.com" id="toggleForm">
+        <form method="POST" id="toggleForm">
 
           <fieldset>
             <legend>Stats to track:</legend>
@@ -232,7 +232,7 @@
       <!--Form that posts results of the goals of the user for each stat to another file-->
 
       <section>
-        <form method="POST" action="something.com">
+        <form method="POST">
           
           <div id="waterGoalDiv">
             <label for="waterGoal">Water:</label>
@@ -242,7 +242,7 @@
 
           <br>
 
-          <div>
+          <div id="sleepGoalDiv">
             <label for="sleepGoal">Sleep:</label>
             <input type="number" id="sleepGoal" name="sleepGoal"
                    placeholder="7">
@@ -250,7 +250,7 @@
 
           <br>
 
-          <div>
+          <div id="mealsGoalDiv">
             <label for="mealsGoal">Meals:</label>
             <input type="number" id="mealsGoal" name="mealsGoal"
                    placeholder="3">
@@ -258,7 +258,7 @@
 
           <br>
 
-          <div>
+          <div id="exerciseGoalDiv">
             <label for="exerciseGoal">Water:</label>
             <input type="number" id="exerciseGoal" name="exerciseGoal"
                    placeholder="30">

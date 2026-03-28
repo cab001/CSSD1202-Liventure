@@ -20,22 +20,85 @@ let dailyMeals = document.getElementById("dailyMeals");
 let dailyExercise = document.getElementById("dailyExercise");
 
 let waterGoalDiv = document.getElementById("waterGoalDiv");
-let sleepGoal = document.getElementById("sleepGoal");
-let mealsGoal = document.getElementById("mealsGoal");
-let exerciseGoal = document.getElementById("exerciseGoal");
+let sleepGoal = document.getElementById("sleepGoalDiv");
+let mealsGoal = document.getElementById("mealsGoalDiv");
+let exerciseGoal = document.getElementById("exerciseGoalDiv");
 
-let waterStreakLabel = document.getElementById("waterStreakLabel")
-// make all streak labels vars, then add them to have their hide classes added&removed in checkToggles func
+let waterStreakLabel = document.getElementById("waterStreakLabel");
+let sleepStreakLabel = document.getElementById("sleepStreakLabel");
+let mealStrLabel = document.getElementById("mealStrLabel");
+let exerciseStrLabel = document.getElementById("exerciseStrLabel");
 
+// function checks if a toggle is checked, and hides/shows the stat's details based off of that
 function checkToggles() {
     if (waterToggle.checked) {
         //remove any hide class or attribute from the stuff that show water goal and progress (ex. Oz of water under tdy's stats and water: under goals:)
         dailyWater.classList.remove("hide");
         waterGoalDiv.classList.remove("hide");
+        waterStreakLabel.classList.remove("hide");
+        //console.log(water.value);
     }
     else {
         dailyWater.classList.add("hide");
+        waterGoalDiv.classList.add("hide");
+        waterStreakLabel.classList.add("hide");
     }
-    // do if statement for all others 
+    if (sleepToggle.checked) {
+        dailySleep.classList.remove("hide");
+        sleepGoal.classList.remove("hide");
+        sleepStreakLabel.classList.remove("hide");
+    }
+    else {
+        dailySleep.classList.add("hide");
+        sleepGoal.classList.add("hide");
+        sleepStreakLabel.classList.add("hide");
+    }
+    if (mealsToggle.checked) {
+        dailyMeals.classList.remove("hide");
+        mealsGoal.classList.remove("hide");
+        mealStrLabel.classList.remove("hide");
+    }
+    else {
+        dailyMeals.classList.add("hide");
+        mealsGoal.classList.add("hide");
+        mealStrLabel.classList.add("hide");
+    }
+    if (exerciseToggle.checked) {
+        dailyExercise.classList.remove("hide");
+        exerciseGoal.classList.remove("hide");
+        exerciseStrLabel.classList.remove("hide");
+    }
+    else {
+        dailyExercise.classList.add("hide");
+        exerciseGoal.classList.add("hide");
+        exerciseStrLabel.classList.add("hide");
+    }
 }
-// also make it in html code(?) that stats to track's checkboxes r auto checked at the beginning
+
+// idea: set all values of "today's stats" back to 0 when its the next day
+// since that is not flashy, we can also alert them when its a new day!!
+let water = document.getElementById("water");
+let sleep = document.getElementById("sleep");
+let meals = document.getElementById("meals");
+let exercise = document.getElementById("exercise");
+
+newDayTimerId = setInterval(newDay, 8.64e7)
+let waterStreak = 0;
+let sleepStreak = 0;
+let mealStreal = 0;
+let exerciseStreak = 0;
+
+function newDay() {
+    // if value of stat greater than goal by reset time, streak += 1;
+    // then set all daily stats to 0
+    water.value = 0;
+    sleep.value = 0;
+    meals.value = 0;
+    exercise.value = 0;
+
+    
+}
+
+// MAKE FUNCTIONS THAT PREVENT FORM SUBMISSION 
+//  UNLESS WE FIGFURE OUT HOW TO ACTUALLY USE THE DATA SENT FROM SUBMITTING FORM
+//  CUZ OTHERWISE ERROR
