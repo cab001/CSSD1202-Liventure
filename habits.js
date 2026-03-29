@@ -128,6 +128,7 @@ function createNewStat() {
         newStatToggle.type = "checkbox";
         newStatToggle.checked = true;
         newStatToggle.classList.add("customStatsToggles");
+        newStatToggle.classList.add("hide");
         //newStatToggle.addEventListener("click", checkToggles);
         newStatToggleLabel.textContent = customStatInput.value;
         newStatToggleLabel.appendChild(newStatToggle);
@@ -151,7 +152,7 @@ function createNewStat() {
         goals.appendChild(document.createElement("br"));
 
         // append newStatStreak stuff
-        newStatStrLabel.textContent = customStatInput.value + " Streak";
+        newStatStrLabel.textContent = customStatInput.value + " Streak: ";
         streaks.appendChild(newStatStrLabel);
 
         //fix: make it (using indexes) so that the stuff append right before the submit btns
@@ -219,9 +220,14 @@ function newDay() {
     sleep.value = 0;
     meals.value = 0;
     exercise.value = 0;
-
-    
 }
+
+waterStreakLabel.textContent = "Water Streak: " + waterStreak;
+sleepStreakLabel.textContent = "Sleep Streak: " + sleepStreak;
+mealStrLabel.textContent = "Meal Streak: " + mealStreak;
+exerciseStrLabel.textContent = "Exercise Streak: " + exerciseStreak;
+// add custom stats' ones?
+// also implement overall health streak and update textcontent of streaks when incremented
 
 // MAKE FUNCTIONS THAT PREVENT FORM SUBMISSION 
 //  UNLESS WE FIGURE OUT HOW TO ACTUALLY USE THE DATA SENT FROM SUBMITTING FORM
