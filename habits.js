@@ -74,6 +74,17 @@ function checkToggles() {
         exerciseStrLabel.classList.add("hide");
     }
     // check list of custom stat toggles (has class .customStatToggles)
+    //let customStatsToggles = document.getElementsByClassName("customStatsToggles");
+    // if (event.target.classList.contains("customStatsToggles")) {
+    //     if (event.target.checked) {
+    //         event.target.classList.remove("hide");
+    //     }
+    //     else {
+    //         event.target.classList.add("hide");
+    //     }
+    //}
+     // maybe disable toggling for this cuz it prolly will be too hard tryna get all of the stuff we made to get the "hide" class
+
 }
 
 // adding custom stat: idea: remove checkbox from the side, 
@@ -117,6 +128,7 @@ function createNewStat() {
         newStatToggle.type = "checkbox";
         newStatToggle.checked = true;
         newStatToggle.classList.add("customStatsToggles");
+        //newStatToggle.addEventListener("click", checkToggles);
         newStatToggleLabel.textContent = customStatInput.value;
         newStatToggleLabel.appendChild(newStatToggle);
         newStatToggleDiv.appendChild(newStatToggleLabel);
@@ -168,7 +180,7 @@ let exercise = document.getElementById("exercise");
 newDayTimerId = setInterval(newDay, 8.64e7) // maybe display how many hours are left to continue ur streak
 let waterStreak = 0;
 let sleepStreak = 0;
-let mealStreal = 0;
+let mealStreak = 0;
 let exerciseStreak = 0;
 
 function newDay() {
@@ -189,6 +201,18 @@ function newDay() {
     }
     else {
         sleepStreak = 0;
+    }
+    if (mealsToggle.checked && mealsGoal.value != "" && meals.value >= mealsGoal.value) {
+        mealStreak += 1;
+    }
+    else {
+        mealStreak = 0;
+    }
+    if (exerciseToggle.checked && exerciseGoal.value != "" && exercise.value >= exerciseGoal.value) {
+        exerciseStreak += 1;
+    }
+    else {
+        exerciseStreak = 0;
     }
     
     water.value = 0;
