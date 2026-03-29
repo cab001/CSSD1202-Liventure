@@ -91,6 +91,7 @@ let addStatBtn = document.querySelector("#addStat");
 let toggles = document.querySelector("#toggles");
 let dailyStats = document.querySelector("#dailyStats");
 let goals = document.querySelector("#goals");
+let streaks = document.querySelector("#streaks");
 
 addStatBtn.addEventListener("click", createNewStat);
 
@@ -137,8 +138,11 @@ function createNewStat() {
         goals.appendChild(newStatGoalDiv);
         goals.appendChild(document.createElement("br"));
 
-        // append newStatSTreak stuff
+        // append newStatStreak stuff
+        newStatStrLabel.textContent = customStatInput.value + " Streak";
+        streaks.appendChild(newStatStrLabel);
 
+        //fix: make it (using indexes) so that the stuff append right before the submit btns
     }
     if (customStatInput.value == "no") {
         alert("yes");
@@ -161,7 +165,7 @@ let sleep = document.getElementById("sleep");
 let meals = document.getElementById("meals");
 let exercise = document.getElementById("exercise");
 
-newDayTimerId = setInterval(newDay, 8.64e7)
+newDayTimerId = setInterval(newDay, 8.64e7) // maybe display how many hours are left to continue ur streak
 let waterStreak = 0;
 let sleepStreak = 0;
 let mealStreal = 0;
@@ -170,7 +174,23 @@ let exerciseStreak = 0;
 function newDay() {
     // if value of stat greater than goal by reset time, streak += 1;
         // and maybe also for now log the last 3 days of stats under trends
+        // and log the streak variable in a file
     // then set all daily stats to 0
+
+    // if water is being tracked, goal is not empty, and water taken >= goal
+    if (waterToggle.checked && waterGoal.value != "" && water.value >= waterGoalDiv.value) {
+        waterStreak += 1;
+    }
+    else {
+        waterStreak = 0;
+    }
+    if (sleepToggle.checked && sleepGoal.value != "" && sleep.value >= sleepGoal.value) {
+        sleepStreak += 1;
+    }
+    else {
+        sleepStreak = 0;
+    }
+    
     water.value = 0;
     sleep.value = 0;
     meals.value = 0;
