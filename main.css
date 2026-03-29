@@ -1,3 +1,16 @@
+/* classes that are added/removed via js */
+.hide {
+  display: none;
+}
+
+.blueShadow {
+  box-shadow: 0 0 8px cyan;
+}
+
+
+
+
+/* default css */
 :root {
   --main-text-color: cyan;
   --main-font-family: "Courier New", Courier, monospace;
@@ -206,7 +219,7 @@ textarea {
   margin: 0 auto;
 }
 
-input[type="submit"] {
+input[type="submit"], #addStat {
   position: relative;
   margin: 20px;
   width: 200px;
@@ -220,7 +233,7 @@ input[type="submit"] {
   box-shadow: 0 0 12px blue;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, #addStat:hover {
   background-color: rgb(76, 59, 140);
   box-shadow: 0 0 12px rgb(76, 59, 140);
 }
@@ -441,8 +454,8 @@ td {
     margin: 25px;
   }
 
-  /* submit button css */
-  input[type="submit"] {
+  /* submit button & some other button's css */
+  input[type="submit"], #addStat {
     position: relative;
     margin: 25px;
     width: 100px;
@@ -687,8 +700,8 @@ section > form > div > input {
     margin: 25px;
   }
 
-  /* submit button css */
-  input[type="submit"] {
+  /* submit button & other button's css */
+  input[type="submit"], #addStat {
     position: relative;
     margin: 25px;
     width: 100px;
