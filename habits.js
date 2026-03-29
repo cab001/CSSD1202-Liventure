@@ -90,6 +90,7 @@ let customStatInput = document.querySelector("#customStatName");
 let addStatBtn = document.querySelector("#addStat");
 let toggles = document.querySelector("#toggles");
 let dailyStats = document.querySelector("#dailyStats");
+let goals = document.querySelector("#goals");
 
 addStatBtn.addEventListener("click", createNewStat);
 
@@ -120,16 +121,26 @@ function createNewStat() {
         newStatToggleDiv.appendChild(newStatToggleLabel);
         toggles.appendChild(newStatToggleDiv);
 
-        newStatLabel.textContent = customStatInput.value;
+        newStatLabel.textContent = customStatInput.value + ":";
         newStat.type = "number";
         newStat.value = "0";
         newStatLabel.appendChild(newStat);
         dailyNewStat.appendChild(newStatLabel);
         dailyStats.appendChild(dailyNewStat);
 
-        //next, append newStatGoal stuff and newStatStreak stuff
+        //appending newStatGoal
+        newStatGoalLabel.textContent = customStatInput.value + ":";
+        newStatGoal.type = "number";
+        newStatGoal.placeholder = "0";
+        newStatGoalLabel.appendChild(newStatGoal);
+        newStatGoalDiv.appendChild(newStatGoalLabel);
+        goals.appendChild(newStatGoalDiv);
+        goals.appendChild(document.createElement("br"));
+
+        // append newStatSTreak stuff
+
     }
-    if (customStatInput == "no") {
+    if (customStatInput.value == "no") {
         alert("yes");
         // could add an achievement for this so the user has some easter eggs to find ^^
     }
