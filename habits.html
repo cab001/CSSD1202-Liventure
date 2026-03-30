@@ -236,7 +236,7 @@
       <!--Form that posts results of the goals of the user for each stat to another file-->
 
       <section>
-        <form method="POST">
+        <form method="POST" id="goals">
           
           <div id="waterGoalDiv">
             <label for="waterGoal">Water:</label>
@@ -280,7 +280,7 @@
 
       <!-- Forth subtitle styled here-->
       
-      <section>
+      <section class="hide">
         <h3>
             <strong>
               <u>
@@ -310,21 +310,21 @@
       </section>
 
       <section>
-        <div>
-          <p id="waterStreakLabel">Water Streak</p>
+        <div id="streaks">
+          <p id="waterStreakLabel">Water Streak: </p>
 
-          <p id="sleepStreakLabel">Sleep Streak</p>
+          <p id="sleepStreakLabel">Sleep Streak: </p>
 
-          <p id="mealStrLabel">Meal Streak</p>
+          <p id="mealStrLabel">Meal Streak: </p>
 
-          <p id="exerciseStrLabel">Exercise Streak</p>
+          <p id="exerciseStrLabel">Exercise Streak: </p>
         </div>
 
         <p>Overall Health Streak</p>
       </section>
 
       <section>
-        <p>[insert longest streak number] days highest streak!!</p>
+        <p id="highestStreakP">0 days highest streak!!</p>
       </section>
 
       

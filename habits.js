@@ -74,6 +74,17 @@ function checkToggles() {
         exerciseStrLabel.classList.add("hide");
     }
     // check list of custom stat toggles (has class .customStatToggles)
+    //let customStatsToggles = document.getElementsByClassName("customStatsToggles");
+    // if (event.target.classList.contains("customStatsToggles")) {
+    //     if (event.target.checked) {
+    //         event.target.classList.remove("hide");
+    //     }
+    //     else {
+    //         event.target.classList.add("hide");
+    //     }
+    //}
+     // maybe disable toggling for this because it will take too long to get all of the stuff we made to get the "hide" class
+
 }
 
 // adding custom stat: idea: remove checkbox from the side, 
@@ -90,6 +101,8 @@ let customStatInput = document.querySelector("#customStatName");
 let addStatBtn = document.querySelector("#addStat");
 let toggles = document.querySelector("#toggles");
 let dailyStats = document.querySelector("#dailyStats");
+let goals = document.querySelector("#goals");
+let streaks = document.querySelector("#streaks");
 
 addStatBtn.addEventListener("click", createNewStat);
 
@@ -115,33 +128,41 @@ function createNewStat() {
         newStatToggle.type = "checkbox";
         newStatToggle.checked = true;
         newStatToggle.classList.add("customStatsToggles");
+        newStatToggle.classList.add("hide");
+        //newStatToggle.addEventListener("click", checkToggles);
         newStatToggleLabel.textContent = customStatInput.value;
         newStatToggleLabel.appendChild(newStatToggle);
         newStatToggleDiv.appendChild(newStatToggleLabel);
         toggles.appendChild(newStatToggleDiv);
 
-        newStatLabel.textContent = customStatInput.value;
+        newStatLabel.textContent = customStatInput.value + ":";
         newStat.type = "number";
         newStat.value = "0";
         newStatLabel.appendChild(newStat);
         dailyNewStat.appendChild(newStatLabel);
         dailyStats.appendChild(dailyNewStat);
 
-        //next, append newStatGoal stuff and newStatStreak stuff
+        //appending newStatGoal
+        newStatGoalLabel.textContent = customStatInput.value + ":";
+        newStatGoal.type = "number";
+        newStatGoal.placeholder = "0";
+        newStatGoalLabel.appendChild(newStatGoal);
+        newStatGoalDiv.appendChild(newStatGoalLabel);
+        goals.appendChild(newStatGoalDiv);
+        goals.appendChild(document.createElement("br"));
+
+        // append newStatStreak stuff
+        newStatStrLabel.textContent = customStatInput.value + " Streak: ";
+        streaks.appendChild(newStatStrLabel);
+
+        //fix: make it (using indexes) so that the stuff append right before the submit btns
     }
-    if (customStatInput == "no") {
+    if (customStatInput.value == "no") {
         alert("yes");
         // could add an achievement for this so the user has some easter eggs to find ^^
     }
     customStatInput.value = "";
 }
-
-
-
-
-
-
-
 
 // idea: set all values of "today's stats" back to 0 when its the next day
 // since that is not flashy, we can also alert them when its a new day!!
@@ -149,24 +170,78 @@ let water = document.getElementById("water");
 let sleep = document.getElementById("sleep");
 let meals = document.getElementById("meals");
 let exercise = document.getElementById("exercise");
+let highestStreakP = document.getElementById("highestStreakP");
 
-newDayTimerId = setInterval(newDay, 8.64e7)
+newDayTimerId = setInterval(newDay, 8.64e7) // maybe display how many hours are left to continue ur streak
 let waterStreak = 0;
 let sleepStreak = 0;
-let mealStreal = 0;
+let mealStreak = 0;
 let exerciseStreak = 0;
+var highestStreak = 0;
 
 function newDay() {
     // if value of stat greater than goal by reset time, streak += 1;
         // and maybe also for now log the last 3 days of stats under trends
+        // and log the streak variable in a file
     // then set all daily stats to 0
+
+    // if water is being tracked, goal is not empty, and water taken >= goal
+    if (waterToggle.checked && waterGoal.value != "" && water.value >= waterGoalDiv.value) {
+        waterStreak += 1;
+    }
+    else {
+        waterStreak = 0;
+    }
+    if (sleepToggle.checked && sleepGoal.value != "" && sleep.value >= sleepGoal.value) {
+        sleepStreak += 1;
+    }
+    else {
+        sleepStreak = 0;
+    }
+    if (mealsToggle.checked && mealsGoal.value != "" && meals.value >= mealsGoal.value) {
+        mealStreak += 1;
+    }
+    else {
+        mealStreak = 0;
+    }
+    if (exerciseToggle.checked && exerciseGoal.value != "" && exercise.value >= exerciseGoal.value) {
+        exerciseStreak += 1;
+    }
+    else {
+        exerciseStreak = 0;
+    }
+
+    if (waterStreak >= highestStreak) {
+        highestStreak = waterStreak;
+    }
+    if (sleepStreak >= highestStreak) {
+        highestStreak = sleepStreak;
+    }
+    if (mealStreak >= highestStreak) {
+        highestStreak = mealStreak;
+    }
+    if (exerciseStreak >= highestStreak) {
+        highestStreak = exerciseStreak;
+    }
+    highestStreakP.textContent = highestStreak + " days highest streak!!"
+    
+    waterStreakLabel.textContent = "Water Streak: " + waterStreak;
+    sleepStreakLabel.textContent = "Sleep Streak: " + sleepStreak;
+    mealStrLabel.textContent = "Meal Streak: " + mealStreak;
+    exerciseStrLabel.textContent = "Exercise Streak: " + exerciseStreak;
+
     water.value = 0;
     sleep.value = 0;
     meals.value = 0;
     exercise.value = 0;
-
-    
 }
+
+waterStreakLabel.textContent = "Water Streak: " + waterStreak;
+sleepStreakLabel.textContent = "Sleep Streak: " + sleepStreak;
+mealStrLabel.textContent = "Meal Streak: " + mealStreak;
+exerciseStrLabel.textContent = "Exercise Streak: " + exerciseStreak;
+// add custom stats' ones?
+// also implement overall health streak and update textcontent of streaks when incremented
 
 // MAKE FUNCTIONS THAT PREVENT FORM SUBMISSION 
 //  UNLESS WE FIGURE OUT HOW TO ACTUALLY USE THE DATA SENT FROM SUBMITTING FORM

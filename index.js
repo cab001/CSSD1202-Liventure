@@ -14,6 +14,9 @@ function mouseoutBtnHandler(event) {
     event.target.classList.remove("blueShadow");
 }
 
+let habitStreakP = document.getElementById("habitStreakP");
+habitStreakP.textContent = "Habit Streak: " + 0;
+
 
 // if have time, can make customizable avatar, and when hover over a hair option of the user's choice, replace the current choice with the one being hovered
 // ex. if they have short hair equipped but their mouse is hovering over the long hair, show the long hair and hide the short hair
