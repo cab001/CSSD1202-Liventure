@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Sign Up Form</title>
-        <link href="signup.css" rel="stylesheet" type="text/css">
         <link href="main.css" rel="stylesheet">
         <link href="images/favicon.png" rel="icon"  type="image/png">
+        <script src="signup.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
@@ -26,7 +26,7 @@
             </ul>
         </nav>
 
-        <main>
+        <main id="signupPage">
             <!--Main Title of Page-->
             <div id="head">
             </div>
@@ -45,7 +45,7 @@
 
             <!--Form-->
             <section>
-                <form action="text_files/signupform.txt" method="post">
+                <form id="signupForm" method="post">
                     <p>
                         <label for="username">Username:</label>
                         <input type="text" name="username" id="username">
@@ -71,14 +71,14 @@
                         <input type="text" name="goals" id="goals" placeholder="Learning healthy habits">
                     </p>
                     <p>
-                        <input type="submit">
+                        <input type="submit" value="submit">
                     </p>
                 </form>
             </section>
 
         <!-- Footer containing copyright information and website logo -->
          </main>
-            <footer>
+        <footer>
                 <br><br>
             <i>
                 All Rights Reserved 2026

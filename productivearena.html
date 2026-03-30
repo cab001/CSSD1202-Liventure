@@ -2,10 +2,10 @@
 <html lang="eng">
     <head>
         <meta charset="utf-8">
-        <title>Sign Up Form</title>
-        <link href="productivearena.css" rel="stylesheet" type="text/css">
+        <title>Productive Arena</title>
         <link href="main.css" rel="stylesheet">
         <link href="images/favicon.png" rel="icon"  type="image/png">
+        <script src="productivearena.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
@@ -51,24 +51,16 @@
                     <p>
                         <label for="addTask">Add tasks/goals:</label>
                         <input type="text" name="addTask" id="addTask">
+                        <button id="addTaskButton">Add task</button>
                     </p>
-                    <p>
-                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 1</label>
-                    </p>
-                    <p>
-                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 2</label>
-                    </p>
-                    <p>
-                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 3</label>
-                    </p>
-                    <p>
-                        <label for="checklist"><input type="checkbox" name="checklist" id="checklist">Goal 4</label>
+                    <p id="taskList">
+                        <label for="checklist" id="task"><input type="checkbox" name="checklist">Free Goal!</label>
                     </p>
                 </form>
             </section>
 
         <!--rewards-->
-            <h2>Achievements</h2>
+            <h2 style="color:aqua;">Achievements</h2>
             <div id="image-grid">
                 <div><img src="images/UnlockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
                 <div><img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
