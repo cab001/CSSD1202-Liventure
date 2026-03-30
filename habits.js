@@ -83,7 +83,7 @@ function checkToggles() {
     //         event.target.classList.add("hide");
     //     }
     //}
-     // maybe disable toggling for this cuz it prolly will be too hard tryna get all of the stuff we made to get the "hide" class
+     // maybe disable toggling for this because it will take too long to get all of the stuff we made to get the "hide" class
 
 }
 
@@ -164,25 +164,20 @@ function createNewStat() {
     customStatInput.value = "";
 }
 
-
-
-
-
-
-
-
 // idea: set all values of "today's stats" back to 0 when its the next day
 // since that is not flashy, we can also alert them when its a new day!!
 let water = document.getElementById("water");
 let sleep = document.getElementById("sleep");
 let meals = document.getElementById("meals");
 let exercise = document.getElementById("exercise");
+let highestStreakP = document.getElementById("highestStreakP");
 
 newDayTimerId = setInterval(newDay, 8.64e7) // maybe display how many hours are left to continue ur streak
 let waterStreak = 0;
 let sleepStreak = 0;
 let mealStreak = 0;
 let exerciseStreak = 0;
+var highestStreak = 0;
 
 function newDay() {
     // if value of stat greater than goal by reset time, streak += 1;
@@ -215,7 +210,26 @@ function newDay() {
     else {
         exerciseStreak = 0;
     }
+
+    if (waterStreak >= highestStreak) {
+        highestStreak = waterStreak;
+    }
+    if (sleepStreak >= highestStreak) {
+        highestStreak = sleepStreak;
+    }
+    if (mealStreak >= highestStreak) {
+        highestStreak = mealStreak;
+    }
+    if (exerciseStreak >= highestStreak) {
+        highestStreak = exerciseStreak;
+    }
+    highestStreakP.textContent = highestStreak + " days highest streak!!"
     
+    waterStreakLabel.textContent = "Water Streak: " + waterStreak;
+    sleepStreakLabel.textContent = "Sleep Streak: " + sleepStreak;
+    mealStrLabel.textContent = "Meal Streak: " + mealStreak;
+    exerciseStrLabel.textContent = "Exercise Streak: " + exerciseStreak;
+
     water.value = 0;
     sleep.value = 0;
     meals.value = 0;
