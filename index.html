@@ -6,8 +6,6 @@
     <title>Home</title>
     <meta charset="utf-8">
     <link href="main.css" rel="stylesheet">
-    <script src="habits.js" defer></script>
-    <script src="index.js" defer></script>
     <link href="images/favicon.png" rel="icon"  type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -45,7 +43,29 @@
       </section>
       <br>
       <!--Contains and styles first subtitle-->
-      
+      <p id="dateTimeOutput" style="color : cyan; text-shadow : 0px 6px 12px cyan"></p>
+
+      <script>
+        let now = new Date();
+
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let day = days[now.getDay()];
+
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+
+        let time = hours + ":" + minutes + ":" + seconds;
+        document.getElementById("dateTimeOutput").innerHTML =`Congratulations on logging in on ${day} at ${time}`;
+      </script>
       <section>
         <h3>
             <b>
@@ -58,17 +78,71 @@
         </h3>
       </section>
 
+      <h3 id="fortune-teller">Muhammad The Fortune Teller</h3>
+    <script>
+      function generateLuckyRange() {
+        let num1 = Math.floor(Math.random() * 10) + 1;
+        let num2 = Math.floor(Math.random() * 10) + 1;
+        let min = Math.min(num1, num2);
+        let max = Math.max(num1, num2);
+        if (min === max) {
+            max = min === 10 ? min : min + 1;
+            min = min === 10 ? min - 1 : min;
+        }
+        return { min, max };
+    }
+
+    const fortunes = {
+        1: "A new door opens when you least expect it.",
+        2: "Double the effort will lead to double the reward.",
+        3: "Three's a charm; expect a lucky trio today.",
+        4: "Your foundation is solid; build upon it.",
+        5: "Five senses are not enough for the magic coming your way.",
+        6: "Harmony is closer than you think.",
+        7: "The number of luck is on your side.",
+        8: "Abundance is a state of mind—and yours is growing.",
+        9: "A long cycle is ending; prepare for the next level.",
+        10: "Completion brings the peace you’ve been seeking."
+    };
+
+    window.onload = function() {
+        let range = generateLuckyRange();
+
+        let userChoice = window.prompt(`The universe has opened a window between ${range.min} and ${range.max}. Pick a number:`);
+        let num = parseInt(userChoice);
+
+        let message = document.createElement("p");
+        message.id = "fortune-display";
+        message.style.cssText = "font-weight: bold; color: cyan; text-shadow: 0px 0px 8px cyan; margin-top: 20px;";
+
+        if (isNaN(num)) {
+            message.textContent = "The spirits require a number, not words!";
+        } 
+        else if (num < range.min || num > range.max) {
+            message.textContent = `You wandered outside the range! ${num} was not between ${range.min} and ${range.max}.`;
+        } 
+        else {
+            message.textContent = `Number ${num}: ${fortunes[num]}`;
+        }
+
+        let heading = document.getElementById("fortune-teller");
+        if (heading) {
+            heading.insertAdjacentElement("afterend", message);
+        } else {
+            document.body.appendChild(message);
+        }
+    };
+    </script>
+
       <!--Skill level of user, idea of streaks (if we are doing that idea) or level of user, 
       which is gained when they meet their goal(s)-->
       
       <section>
-        <img src="images/liventure-avatar.avif" alt="avatar" width="200" class="img-fluid img-thumbnail float-left" style="padding:10px">
-        <p style="margin:10px; padding:10px;">
-        <p id="habitStreakP">Habit Streak:</p>
-        <p class="hide">Productivity Streak:</p>
+        <p>Habit Streak:</p>
+        <p>Productivity Streak:</p>
       </section>
 
-      <hr style="clear:both">
+      <hr>
       
       <!-- Second subtitle styled here-->
       
@@ -106,49 +180,49 @@
 
       <section style="padding: 1vh" id="navigation-module"> 
         <a href="money.html">
-            <button class="tBtn">
+            <button>
                 <strong>Money Manager</strong>
             </button>
         </a>
         
         <a href="habits.html">
-            <button class="tBtn">
+            <button>
                 <strong>Habit Tracker</strong>
             </button>
         </a>
 
         <a href="productivity.html">
-            <button class="tBtn">
+            <button>
                 <strong>Productivity Arena</strong>
             </button>
         </a>
 
         <a href="achievements.html">
-            <button class="tBtn">
+            <button>
                 <strong>Achievements</strong>
             </button>
         </a>
 
         <a href="profile.html">
-            <button class="tBtn">
+            <button>
                 <strong>Profile</strong>
             </button>
         </a>
 
         <a href="form.html">
-            <button class="tBtn">
+            <button>
                 <strong>Sign Up Form</strong>
             </button>
         </a>
 
         <a href="about.html">
-            <button class="tBtn">
+            <button>
                 <strong>About Liventure</strong>
             </button>
         </a>
 
         <a href="contact.html">
-            <button class="tBtn">
+            <button>
                 <strong>Contact Us</strong>
             </button>
         </a>

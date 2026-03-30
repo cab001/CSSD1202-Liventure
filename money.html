@@ -87,6 +87,8 @@
       </section>
 
       <hr>
+      <p id="money-data" style="color: cyan; text-shadow: 0px 6px 12px cyan">Click The button below to find out what your bank account will look like after you use this page for a while</p>
+      <button id="click-button">Click</button>
       <br>
       
       <!-- Header For Money Management Form-->
@@ -120,7 +122,7 @@
       <!-- Money management form to assess user's financial habits -->
       <!-- Ordered list used to number questions clearly -->
 
-      
+      <p id="ErrorMessage"></p>
       <section>
         <form method="post" action="text_files/moneyform.txt">
 
@@ -257,9 +259,12 @@
           </ol>
 
         </form>
+        <button id="submission">Submit</button>
       </section>
       <hr>
       <br>
+      <p id="result"> 
+      </p>
     </main>
     <aside>
       <section style="padding-top:4vh">
@@ -398,6 +403,7 @@
         <hr>
       </footer>
     
-    
+    <script src="money.js" defer></script>
+    <script src="validate_money.js" defer></script>
   </body>
 </html>
