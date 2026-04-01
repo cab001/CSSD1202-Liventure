@@ -22,6 +22,12 @@ habitStreakP.textContent = "Habit Streak: " + 0;
 // ex. if they have short hair equipped but their mouse is hovering over the long hair, show the long hair and hide the short hair
 // otherwise just add a picture for a default avatar in the html
 
+import { save } from './profile.js';
+
+let avatarImg = document.getElementById("avatarImg");
+save(avatarImg);
+
+/*
 let longHair = document.getElementById("longHair");
 let shortHair = document.getElementById("shortHair");
 
@@ -39,4 +45,4 @@ function longHairClicked() {
 function shortHairClicked() {
     longHair.classList.add("hide");
     shortHair.classList.remove("hide");
-}
+}*/
