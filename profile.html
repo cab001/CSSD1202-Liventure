@@ -6,6 +6,7 @@
     <title>Profile</title>
     <meta charset="utf-8">
     <link href="main.css" rel="stylesheet">
+    <script src="profile.js" defer></script>
     <link href="images/favicon.png" rel="icon"  type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -49,7 +50,7 @@
       
       <!--Contains and styles first subtitle-->
       
-      <section>
+      <section class="hide">
         <h3>
             <b>
               <u>
@@ -66,7 +67,7 @@
       
       <!-- Second subtitle styled here-->
       
-      <section>
+      <section class="hide">
         <h3>
             <strong>
               <u>
@@ -77,6 +78,25 @@
             </strong>
         </h3>
       </section>
+
+      <section>
+        <img src="images/liventure-longhair-avatar.png" id="longHair" alt="avatar" width="200" class="img-fluid img-thumbnail float-left hide" style="padding:10px">
+        <img src="images/liventure-shorthair-avatar.png" id="shortHair" alt="avatar" width="200" class="img-fluid img-thumbnail float-left" style="padding:10px">
+        <p style="margin:10px; padding:10px;">
+        <p>Avatar selection!</p>
+      </section>
+      <div>
+      <label for="shortHairBtn">
+        <input type="radio" name="avatars" value="shortHair" id="shortHairBtn" checked>
+        Short Hair Avatar
+      </label>
+      </div>
+
+      <label for="longHairBtn">
+        <input type="radio" name="avatars" value="longHair" id="longHairBtn">
+        Long Hair Avatar
+      </label>
+      <hr style="clear:both">
       
       <!-- skill levels go here-->
 
