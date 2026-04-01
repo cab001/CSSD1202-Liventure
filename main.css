@@ -526,9 +526,9 @@ section > form > div > input {
     font-size: 7px;
   }
 
-  #image-grid > div > img {
-    height: 40vw;
-    width: 40vw;
+  #image-grid > div > p > img {
+    height: 30vw;
+    width: 30vw;
   }
 
   h2 {
@@ -776,9 +776,9 @@ section > form > div > input {
     font-size: 2.5vw;
   }
 
-  #image-grid > div > img {
-    height: 40vw;
-    width: 40vw;
+  #image-grid > div > p > img {
+    height: 30vw;
+    width: 30vw;
   }
 
   h2 {
