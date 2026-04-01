@@ -294,6 +294,11 @@ td {
   padding: 10px;
 }
 
+#image-grid > div > p {
+  color: gold;
+  text-shadow: 0 0 12px gold;
+}
+
 /* breakpoints for phones */
 
 /* for phones with screens <=319px wide in portrait mode*/
