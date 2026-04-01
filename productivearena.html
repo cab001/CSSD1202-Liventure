@@ -46,7 +46,7 @@
 
         <!--Form-->
             <section>
-                <form action="text_files/goals.txt" method="post">
+                <form method="post" id="taskForm">
                     <p>
                         <label for="addTask">Add tasks/goals:</label>
                         <input type="text" name="addTask" id="addTask">
@@ -61,10 +61,30 @@
         <!--rewards-->
             <h2 style="color:aqua;">Achievements</h2>
             <div id="image-grid">
-                <div><img src="images/UnlockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
-                <div><img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
-                <div><img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
-                <div><img src="images/LockedReward.png" alt="Reward unlocked image" height="200" width="200"></div>
+                <div>
+                    <p>
+                        <img src="images/LockedReward.png" id="oneGoal" alt="Reward unlocked image" height="200" width="200">
+                        <br>1 Goal Completed!
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <img src="images/LockedReward.png" id="fiveGoals" alt="Reward unlocked image" height="200" width="200">
+                        <br>5 Goals Completed! 
+                    </p>   
+                </div>
+                <div>
+                    <p>
+                        <img src="images/LockedReward.png" id="tenGoals" alt="Reward unlocked image" height="200" width="200">
+                        <br>10 Goals Completed!
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <img src="images/LockedReward.png" id="twentyFiveGoals" alt="Reward unlocked image" height="200" width="200">
+                        <br>25 Goals Completed!  
+                    </p>  
+                </div>
             </div>
         </main>
         <!--epmty space-->
