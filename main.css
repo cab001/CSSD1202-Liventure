@@ -7,6 +7,15 @@
   box-shadow: 0 0 8px cyan;
 }
 
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
 
 
 
